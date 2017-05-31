@@ -1,0 +1,28 @@
+{
+    "include": [
+        "./src/**/*",
+        "./test/**/*",
+        "./typings/**/*",
+        "./node_modules/@types/**/*"
+    ],
+    "compilerOptions": {
+        "outDir": "./dist/out",
+        "baseUrl": "./src",
+        "typeRoots": [
+            "./node_modules/@types",
+            "./typings"
+        ],
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": false,
+        "sourceMap": true,
+        "importHelpers": true,
+        "jsx": "react",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "es5",
+        "lib": ["dom", "es2015"]
+    }
+}

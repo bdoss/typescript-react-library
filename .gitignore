@@ -1,0 +1,16 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+.npmrc
+npm-debug.log
+node_modules/
+dist/
+*.tgz
+
+.nyc_output/
+test/**/*.out.*
+
+.tmp/
+.yarn-cache.tgz

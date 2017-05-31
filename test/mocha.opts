@@ -1,0 +1,8 @@
+--trace-warnings
+--full-trace
+--bail
+--recursive
+--compilers ts:ts-node/register
+--require test/globals
+--timeout 2500
+test/**/*.test.{ts,tsx}

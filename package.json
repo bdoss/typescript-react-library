@@ -1,0 +1,52 @@
+{
+    "name": "typescript-react-library",
+    "version": "1.0.0",
+    "description": "Boilerplate for TypeScript React component library",
+    "repository": {
+        "type": "git",
+        "url": "https://git.bigly.ninja/npm/typescript-react-library.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.bigly.ninja"
+    },
+    "author": "bdoss",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "npm run clean:build && npm run lint && tsc -p ./tsconfig.build.json && cp ./package.json ./dist/lib",
+        "clean:build": "rimraf ./dist/lib",
+        "dist": "cd ./dist/lib && npm publish",
+        "lint": "tslint ./src ./test",
+        "lintfix": "tslint --fix ./src ./test",
+        "testonly": "cross-env NODE_ENV=test NODE_PATH=src nyc mocha",
+        "test": "npm run lint && npm run testonly",
+        "test-watch": "npm run testonly -- --watch --watch-extensions ts,tsx",
+        "type-check": "tsc -p ./tsconfig.json --noEmit"
+    },
+    "devDependencies": {
+        "@types/chai": "^3.5.2",
+        "@types/enzyme": "^2.8.0",
+        "@types/jsdom": "^2.0.30",
+        "@types/mocha": "^2.2.41",
+        "@types/react": "^15.0.25",
+        "@types/react-dom": "^15.5.0",
+        "@types/react-test-renderer": "^15.5.0",
+        "@types/sinon": "^2.2.2",
+        "chai": "^3.5.0",
+        "cross-env": "^5.0.0",
+        "enzyme": "^2.2.0",
+        "jsdom": "^8.1.0",
+        "mocha": "^2.4.5",
+        "nyc": "^10.3.2",
+        "react": "^15.0.0",
+        "react-dom": "^15.0.0",
+        "react-test-renderer": "^15.5.4",
+        "rimraf": "^2.6.1",
+        "sinon": "^1.17.3",
+        "ts-node": "^3.0.4",
+        "typescript": "^2.3.4"
+    },
+    "peerDependencies": {
+        "react": "^15.0.0",
+        "react-dom": "^15.0.0"
+    }
+}
