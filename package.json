@@ -4,11 +4,9 @@
     "description": "Boilerplate for TypeScript React component library",
     "repository": {
         "type": "git",
-        "url": "https://git.bigly.ninja/npm/typescript-react-library.git"
+        "url": "https://github.com/bdoss/typescript-react-library.git"
     },
-    "publishConfig": {
-        "registry": "https://npm.bigly.ninja"
-    },
+    "private": true,
     "author": "bdoss",
     "license": "MIT",
     "scripts": {
