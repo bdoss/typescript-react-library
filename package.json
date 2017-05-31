@@ -10,7 +10,7 @@
         "registry": "https://npm.bigly.ninja"
     },
     "author": "bdoss",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "npm run clean:build && npm run lint && tsc -p ./tsconfig.build.json && cp ./package.json ./dist/lib",
         "clean:build": "rimraf ./dist/lib",
